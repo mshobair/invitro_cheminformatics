@@ -1,9 +1,6 @@
 # invitro_cheminformatics
 Workflow to perform cheminformatics analysis of a database instance on linux server containing in vitro toxicological data. This workflow queries the databases (invitrodb [prod_internal_invitrodb_v3_3], dsstox[], qsar[ro_rlougee_qsar] )
-***
-Something
 
-***
 
 Workflow steps :
   1) Access invitrodb v3_3 database through R-package (tcpl) to get a list of "assay_component_endpoint_id" or "aeid" and obtain the DTXSID_hitc table for each aeid.
