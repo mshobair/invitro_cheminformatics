@@ -40,8 +40,18 @@ aeid_table <- tcplLoadAeid()
 # write table of aeids
 write.csv(aeid_table, "aeid_table.csv")
 ```
-  - Obtain input files programmatically from invitrodb v3_3 
-    - R-package tcpl query data from ccte-mysql-res.epa.gov  
+- Obtain input files programmatically from invitrodb v3_3 
+```r
+# loop through each aeid and write the mc5 table
+for(i in aeid_table$aeid[1:2]){ # substitute "2" in "[1:2]" with total number of aeids {total; 1:length(aeid_table$aeid)}
+mc5 <- tcplSubsetChid(tcplPrepOtpt(tcplLoadData(lvl=5, fld ="aeid", val = i))) # getting level 5 data for binary hitcall (hitc)
+mc5_sub <- mc5[, c("dsstox_substance_id", "hitc")] # selecting the relevant columns DTXSID(dsstox_substance_id) and hitcall (hitc)
+mc5_sub_name <- paste0("mc5_", i, ".csv") # saving the DTXSID_hitc table for a specific aeid (i) and naming it by the aeid (mc5_1.csv)
+write.csv(mc5_sub, mc5_sub_name) # writing the table to a CSV file (mc5_1.csv) in the current directory
+}
+
+```
+
   - Clean the files to be compatible with the chemotype enrichment analysis workflow
     - Python script to change identifier DTXSID to DTXCID
     - Bash scripts to clean and reforrmat the files
