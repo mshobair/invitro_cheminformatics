@@ -51,11 +51,16 @@ mc5_sub_name <- paste0("mc5_", i, ".csv") # saving the DTXSID_hitc table for a s
 write.csv(mc5_sub, mc5_sub_name, row.names = F) # writing the table to a CSV file (mc5_1.csv) in the current directory
 }
 ```
+Exit R :
+ctrl + D
+Y
+
 2) ACCESS - Connect to the res1 databases and sandboxes.
-Let's start a virtual environment, so that we can install python dependencies and modules to prepare the input files. We will make a virtual environment "test_env", activate it and install python modules in it to use as python scripts or Command-Line-Interface (CLI) tool. 
+Let's start a virtual environment, so that we can install python dependencies and modules to prepare the input files. We will make a virtual environment "test_env", activate it and install python modules in it to use as python scripts or Command-Line-Interface (CLI) tool. If virtualenv is not installed, consult with the IT team.
 
 ```sh
 mkdir test_env
+python3 -m virtualenv test_env
 source test_env/bin/activate
 pip install pandas
 pip install mysql-connector
@@ -73,67 +78,73 @@ cd ../
 
 - remove lines with "NA" or "-1"
 ```sh
-mkdir clean
-cd clean
-for file in ../*; do cut -d"," -f1 $file > "$file.clean" ; done
+for file in mc*; do sed '/-/d'  $file | sed '/NA/d' >  clean/"$file.clean" ; done
 ```
 
 - Convert CSV to TSV using csv2tsv.py
   - copy all the mc5* files into a new directory (csvtotsv)
 ```sh
 mkdir csvtotsv
-cp *clean csvtotsv
+cp *clean csvtocsv
 ```
-  - change the directory path in the csv2tsv.py to reflect the path of csvtotsv
-  - run the python code
+  
+- run the CSV to TSV conversion and copy to TSV to new directory (TSV)
 ```sh
-python ../csv2tsv.py
+python csv2tsv.py
+mkdir tsv
+cp csvtotsv/*tsv tsv
 ```
+4) Convert substance DTXSID to structure identifier DTXCID using python module Chemical_ID_Convert
 
-
-
-
-    - Python script to change identifier DTXSID to DTXCID
-    - Bash scripts to clean and reforrmat the files
-  - 
-    - We used the provided data and stayed within the context of the Challenge.
-    - Creating an easily reproducible way of collapsing large datasets
-    - Begin exploring the identification of associations within the provided dataset between clinical factors and adaptive immunological features
-    - Show examples of the explored associations using visualizations and showing the logic behind how these associations/visualizations were generated
-
-***
-Here is an overview of setting up the computing environment for chemotype enrichment analysis.
-
-![](ETL.svg)
-
-## Setting up dependencies and virtual environment
-App development and testing was done primarily in Ubuntu 20.04/18.04.
-
-<!-- GP - Edited to remove unneeded dependencies -->
-### Install ubuntu dependencies:
+install the Chemical_ID_Convert module
 ```sh
-sudo apt install -y curl sqlite3 pipenv jupyter-client r-base-core libgsl-dev libcurl4-openssl-dev git libxml2-dev
-
+cd  Chemical_ID_Convert
+pip install -e .
+cd ..
 ```
-<!-- GP - Edited to add "R" and further show what to do when done with step-->
-### Install R packages
-```R
-R (opens R environment)
-install.packages(c("IRkernel", "data.table", "RSQLite", "sqldf", "BiocManager", "yaml")) 
-(Answer "yes" twice)
-library(IRkernel)
-IRkernel::installspec()
-library(BiocManager)
-BiocManager::install("universalmotif")
-BiocManager::install("MotifDb")
+run the chemid convert on the TSV
 
-(Ctrl + D to Exit Environment)
-(Answer "No" to saving workspace)
-```
-
-### Download, extract the zipped repo source 
-Make certain you are not in "/" when running this.
 ```sh
-git clone --branch datapipeline https://github.com/mshobair/precisionFDA_Covid19_repo.git 
-cd precisionFDA_Covid19_repo
+cd tsv
+for file in *; do chemidconvert DTXSID DTXCID $file -e > "$file.dtxcid" ; done
 ```
+copy converted files into a new directory (dtxcid)
+```sh
+mkdir dtxcid
+cp tsv/*dtxcid dtxcid
+```
+
+5) skip if no errors
+6) Query descriptor table to get the ToxPrint fingerprints. Install FillFingerprints module.
+```sh
+cd FillFingerprints
+pip install -e .
+cd ../
+```
+Generate fingerprint tables
+```sh
+cd dtxcid
+for file in *; do fillfp $file -o "$file.fp" ; done
+cd ../
+```
+copy fingerprint files to a new directory (fp)
+```sh
+mkdir fp
+cp dtxcid/*fp fp
+```
+7) Generate Enrichment Table
+install Enrichment_Table_Generator dependencies
+```sh
+cd Enrichment_Table_Generator
+python setup.py install
+cd ../
+```
+run enrichment for each file
+```sh
+cd fp
+for file in *; do python Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done
+cd ../
+```
+
+
+
