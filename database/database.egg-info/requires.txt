@@ -1,0 +1,6 @@
+docopt
+pandas
+colorama
+scipy
+pyyaml
+sqlalchemy

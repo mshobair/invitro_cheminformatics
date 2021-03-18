@@ -1,0 +1,8 @@
+setup.py
+chemidconvert.egg-info/PKG-INFO
+chemidconvert.egg-info/SOURCES.txt
+chemidconvert.egg-info/dependency_links.txt
+chemidconvert.egg-info/entry_points.txt
+chemidconvert.egg-info/not-zip-safe
+chemidconvert.egg-info/requires.txt
+chemidconvert.egg-info/top_level.txt

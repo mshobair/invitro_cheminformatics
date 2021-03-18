@@ -1,0 +1,8 @@
+Enrichment_Table_Generator.py
+setup.py
+Enrichment_Table_Generator.egg-info/PKG-INFO
+Enrichment_Table_Generator.egg-info/SOURCES.txt
+Enrichment_Table_Generator.egg-info/dependency_links.txt
+Enrichment_Table_Generator.egg-info/entry_points.txt
+Enrichment_Table_Generator.egg-info/requires.txt
+Enrichment_Table_Generator.egg-info/top_level.txt

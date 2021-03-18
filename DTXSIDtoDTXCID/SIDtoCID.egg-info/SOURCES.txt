@@ -1,0 +1,8 @@
+SIDtoCID.py
+setup.py
+SIDtoCID.egg-info/PKG-INFO
+SIDtoCID.egg-info/SOURCES.txt
+SIDtoCID.egg-info/dependency_links.txt
+SIDtoCID.egg-info/entry_points.txt
+SIDtoCID.egg-info/requires.txt
+SIDtoCID.egg-info/top_level.txt

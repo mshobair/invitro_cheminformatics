@@ -1,0 +1,6 @@
+Click
+xlrd
+pandas
+scipy
+progressbar2
+numpy

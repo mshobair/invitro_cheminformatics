@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    Enrichment_Table_Generator=Enrichment_Table_Generator:cli
+  
