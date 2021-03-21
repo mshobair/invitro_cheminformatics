@@ -56,6 +56,7 @@ Y
 Let's start a virtual environment, so that we can install python dependencies and modules to prepare the input files. We will make a virtual environment "test_env", activate it and install python modules in it to use as python scripts or Command-Line-Interface (CLI) tool. If virtualenv is not installed, consult with the IT team.
 
 ```sh
+rm -r test_env
 mkdir test_env
 python3 -m virtualenv test_env
 source test_env/bin/activate
