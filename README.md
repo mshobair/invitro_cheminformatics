@@ -57,6 +57,7 @@ Let's start a virtual environment, so that we can install python dependencies an
 
 ```sh
 rm -r test_env
+rm *.clean
 mkdir test_env
 python3 -m virtualenv test_env
 source test_env/bin/activate
@@ -76,20 +77,19 @@ cd ../
 
 - remove lines with "NA" or "-1"
 ```sh
+mkdir clean
 for file in mc*; do sed '/-/d'  $file | sed '/NA/d' >  clean/"$file.clean" ; done
 ```
 
 - Convert CSV to TSV using csv2tsv.py
   - copy all the mc5* files into a new directory (csvtotsv)
 ```sh
-mkdir csvtotsv
-cp *clean csvtocsv
+cp clean/*.clean csvtocsv
 ```
   
 - run the CSV to TSV conversion and copy to TSV to new directory (TSV)
 ```sh
 python csv2tsv.py
-mkdir tsv
 cp csvtotsv/*tsv tsv
 ```
 4) Convert substance DTXSID to structure identifier DTXCID using python module Chemical_ID_Convert
