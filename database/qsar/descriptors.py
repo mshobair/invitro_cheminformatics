@@ -1,11 +1,11 @@
 import datetime
 
-from database_schemas import Schemas
-from qsar.descriptor_sets import DescriptorSets
+from database.database_schemas import Schemas
+from database.qsar.descriptor_sets import DescriptorSets
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 
-from base import Base
+from database.base import Base
 
 
 class Descriptors(Base):

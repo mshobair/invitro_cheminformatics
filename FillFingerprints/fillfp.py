@@ -6,11 +6,11 @@ if len(newsyspath) == 0:
 else:
     sys.path.append('\\'.join(newsyspath))
 
-from database_schemas import Schemas
-from dsstox.compounds import Compounds
-from session import SQLSession
-from qsar.compound_descriptor_sets import CompoundDescriptorSets
-from qsar.descriptors import Descriptors
+from database.database_schemas import Schemas
+from database.dsstox.compounds import Compounds
+from database.session import SQLSession
+from database.qsar.compound_descriptor_sets import CompoundDescriptorSets
+from database.qsar.descriptors import Descriptors
 import sys
 import click
 import pandas as pd

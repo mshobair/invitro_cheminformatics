@@ -1,10 +1,10 @@
 import datetime
 
-from database_schemas import Schemas
+from database.database_schemas import Schemas
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.orm import relationship
 
-from base import Base
+from database.base import Base
 
 
 class CompoundDescriptorSets(Base):
