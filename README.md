@@ -92,11 +92,12 @@ for file in mc*; do sed '/-/d'  $file | sed '/NA/d' >  clean/"$file.clean" ; don
 - Convert CSV to TSV using csv2tsv.py
   - copy all the mc5* files into a new directory (csvtotsv)
 ```sh
-cp clean/*.clean csvtocsv
+cp clean/*.clean csvtotsv
 ```
   
 - run the CSV to TSV conversion and copy to TSV to new directory (TSV)
 ```sh
+# update the directory paths in csv2tsv.py
 python csv2tsv.py
 cp csvtotsv/*tsv tsv
 ```
