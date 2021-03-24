@@ -1,0 +1,26 @@
+Fingerprint_ID	F-Total	TP	FP	FN	TN	Balanced Accuracy	Odds Ratio	Pval	file_name
+Txp-61	9	4	5	436	2482	0.5035402273641115	4.554	0.034	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-76	107	36	71	404	2416	0.5266348649340206	3.032	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-78	13	6	7	434	2480	0.5054108637643017	4.898	0.007	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-80	31	14	17	426	2470	0.5124913184925247	4.775	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-83	89	32	57	408	2430	0.5249040464963264	3.344	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-85	83	30	53	410	2434	0.5234355009686734	3.36	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-95	23	8	15	432	2472	0.5060752275468802	3.052	0.015	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-116	28	10	18	430	2469	0.5077448185108017	3.19	0.005	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-167	21	8	13	432	2474	0.5064773184194173	3.524	0.008	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-264	23	8	15	432	2472	0.5060752275468802	3.052	0.015	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-269	5	3	2	437	2485	0.5030070000365537	8.53	0.027	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-327	2	2	0	438	2487	0.5022727272727273	inf	0.023	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-330	2	2	0	438	2487	0.5022727272727273	inf	0.023	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-435	91	36	55	404	2432	0.5298515919143181	3.94	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-445	28	10	18	430	2469	0.5077448185108017	3.19	0.005	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-446	15	6	9	434	2478	0.5050087728917645	3.806	0.017	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-471	23	8	15	432	2472	0.5060752275468802	3.052	0.015	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-560	3	3	0	437	2487	0.5034090909090909	inf	0.003	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-593	17	7	10	433	2477	0.5059440910918594	4.004	0.008	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-602	35	30	5	410	2482	0.5330856819095661	36.322	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-611	16	7	9	433	2478	0.5061451365281281	4.451	0.006	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-626	2	2	0	438	2487	0.5022727272727273	inf	0.023	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-648	8	4	4	436	2483	0.5037412728003802	5.695	0.021	mc5_2.tsv.dtxcid.fp.tsv.enrich
+Txp-691	10	8	2	432	2485	0.5086888182183719	23.009	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
+CONSENSUS ROW	335	99	236	341	2251	0.5650532770406111	2.769	0.0	mc5_2.tsv.dtxcid.fp.tsv.enrich
