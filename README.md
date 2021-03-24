@@ -97,6 +97,7 @@ cp clean/*.clean csvtotsv
   
 - run the CSV to TSV conversion and copy to TSV to new directory (TSV)
 ```sh
+# update the directory paths in csv2tsv.py
 python csv2tsv.py
 cp csvtotsv/*tsv tsv
 ```
