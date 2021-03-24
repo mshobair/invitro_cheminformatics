@@ -103,7 +103,8 @@ cd ..
 run the chemid convert on the TSV
 
 ```sh
-cd tsv
+nohup sh -c 'for file in *; do chemidconvert DTXSID DTXCID $file -e > "$file.dtxcid" ; done' >> out &  
+# or
 for file in *; do chemidconvert DTXSID DTXCID $file -e > "$file.dtxcid" ; done
 ```
 copy converted files into a new directory (dtxcid)
@@ -122,6 +123,8 @@ cd ../
 Generate fingerprint tables
 ```sh
 cd dtxcid
+nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+# or
 for file in *; do fillfp $file -o "$file.fp" ; done
 cd ../
 ```
@@ -130,7 +133,7 @@ copy fingerprint files to a new directory (fp)
 mkdir fp
 cp dtxcid/*fp fp
 ```
-7) Generate Enrichment Table
+7) Generate enrichment table
 install Enrichment_Table_Generator dependencies
 ```sh
 cd Enrichment_Table_Generator
@@ -140,9 +143,16 @@ cd ../
 run enrichment for each file
 ```sh
 cd fp
-for file in *; do python Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done
+nohup sh -c 'for file in *; do python Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
 cd ../
 ```
 
-
+8) Create global baseline enrichment table
+    
+   - remove duplicate headers
+   - remove consensus lines
+   - add column "file" referencing mc5 table from invitrodb 
+      - for file in * ; do awk 'NR == 1 {print $0 "\t" "file_name" ; next ; }{print $0 "\t" FILENAME ; }' file > file ; done   
+   - add column "aeid" 
+      - 
 
