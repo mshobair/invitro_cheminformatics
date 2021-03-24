@@ -5,7 +5,7 @@ if len(newsyspath) == 0:
     sys.path.append('/'.join(newsyspath))
 else:
     sys.path.append('\\'.join(newsyspath))
-#
+
 import click
 import sys
 import pandas as pd
@@ -15,14 +15,15 @@ from enrichment import enrich
 from finaltable import generate_final_table
 from io import StringIO
 
-#@click.command()
-#@click.argument(i, required = False)
-#@click.option('-o', default='enrichment_table_result.tsv',
-#    help='output file in .tsv format')
-#@click.option('-duplicates', default=0,
- #   help='how to handle duplicate IDs:\n0)include duplicates\n1)discard duplicates\n2)include most frequent duplicate')
-#@click.option('-oenrich', default='',
-#              help='outputs the full enrichment table to PATH')
+@click.command()
+@click.option('-i',
+              help='input file must be format .tsv, .xls or .xlsx')
+@click.option('-o', default='enrichment_table_result.tsv',
+    help='output file in .tsv format')
+@click.option('-duplicates', default=0,
+    help='how to handle duplicate IDs:\n0)include duplicates\n1)discard duplicates\n2)include most frequent duplicate')
+@click.option('-oenrich', default='',
+              help='outputs the full enrichment table to PATH')
 def cli(i ,o ,duplicates,oenrich ):
 
     ### HELP DOCUMENTATION ###
@@ -51,7 +52,7 @@ def cli(i ,o ,duplicates,oenrich ):
             filename, file_extension = os.path.splitext(i)
 
             if file_extension == '.tsv':
-                myinputtable = pd.read_csv(i, sep='\t')
+                myinputtable = pd.read_csv(i, sep='\t', low_memory=False)
             elif file_extension == '.xlsx' or file_extension == '.xls':
                 myinputtable = pd.read_excel(i)
         except:
