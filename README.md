@@ -3,10 +3,11 @@ Workflow to perform cheminformatics analysis of a database instance on linux ser
 
 
 Workflow steps :
+  0) Clone this repo in a new directory
   1) Access invitrodb v3_3 database through R-package (tcpl) to get a list of "assay_component_endpoint_id" or "aeid" and obtain the DTXSID_hitc table for each aeid.
   2) Access DSSTOX database using python package "database"
   3) Reformat DTXSID_hitc (CSV) tables to DTXCID_hitc (tsv)
-  4) Convert substance DTXSID to structure identifier DTXCID using python module DTXSIDtoDTXCID
+  4) Convert substance DTXSID to structure identifier DTXCID using python module chemidconvert
   5) Clean DTXCID_hitc files using bash commands
   6) Access and query sbox_rlougee_qsar to add fingerprint(ToxPrint) columns to each DTXCID_hitc table
   7) Run the prepared files as input to the chemotype enrichment analysis workflow (repo: mshobair/cheminf ; branch= main) to generate enrichment table
@@ -15,7 +16,14 @@ Workflow steps :
 Next steps:
   9) Modify the tcpl query to add filters using the "burst" functions, such as tcpl_cytopt, to change the DTXCID_hitc matrices.
   
-  1) ACCESS - Within the EPA network, log to sc.epa.gov or other server with R installed, which can be accessed remotely from cu.epa.gov via ssh. 
+  0) New directory and clone this to it
+```sh
+mkdir new_directory
+cd new_directory
+git clone https://github.com/mshobair/invitro_cheminformatics.git
+cd invitro_cheminformatics
+```
+  2) ACCESS - Within the EPA network, log to sc.epa.gov or other server with R installed, which can be accessed remotely from cu.epa.gov via ssh. 
   
 Within shell terminal in a new directory:
 
@@ -103,13 +111,13 @@ cd ..
 run the chemid convert on the TSV
 
 ```sh
+cd tsv
 nohup sh -c 'for file in *; do chemidconvert DTXSID DTXCID $file -e > "$file.dtxcid" ; done' >> out &  
-# or
-for file in *; do chemidconvert DTXSID DTXCID $file -e > "$file.dtxcid" ; done
+cd ../
 ```
 copy converted files into a new directory (dtxcid)
 ```sh
-mkdir dtxcid
+
 cp tsv/*dtxcid dtxcid
 ```
 
@@ -123,15 +131,14 @@ cd ../
 Generate fingerprint tables
 ```sh
 cd dtxcid
-nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
-# or
-for file in *; do fillfp $file -o "$file.fp" ; done
+nohup sh -c 'for file in *dtxcid; do fillfp $file -o "$file.fp.tsv" ; done' >> out &
+
 cd ../
 ```
 copy fingerprint files to a new directory (fp)
 ```sh
-mkdir fp
-cp dtxcid/*fp fp
+
+cp dtxcid/*fp.tsv fp
 ```
 7) Generate enrichment table
 install Enrichment_Table_Generator dependencies
@@ -143,16 +150,35 @@ cd ../
 run enrichment for each file
 ```sh
 cd fp
-nohup sh -c 'for file in *; do python Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+nohup sh -c 'for file in *.fp.tsv; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
 cd ../
+```
+
+8) Prepare enrichment tables
+```sh
+cp fp/*enrich enrich
+cd enrich
 ```
 
 8) Create global baseline enrichment table
     
-   - remove duplicate headers
-   - remove consensus lines
-   - add column "file" referencing mc5 table from invitrodb 
-      - for file in * ; do awk 'NR == 1 {print $0 "\t" "file_name" ; next ; }{print $0 "\t" FILENAME ; }' file > file ; done   
-   - add column "aeid" 
-      - 
+   - add column "file" referencing file with mc5 table from invitrodb to get aeid
+      - for file in *.enrich ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' $file > $file.aeid ; done  
+   - copy header and create a file for global table and dump all enrichment tables to it
+      - head -n 1 mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid > header
+      - cp header global
+      - rm global_temp
+      - cat *.aeid >> global_temp
+   - remove sconsensus lines
+      - sed -i '/CONSENSUS/d' global_temp
+   - remove duplicate header
+      - sed -i '/Finger/d' global_temp
+   - generate clean global table
+      - cat global_temp >> global 
+   - add column "aeid" to global from "file_name" column
+      - echo aeid > aeid
+      - grep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid_values
+      - cat aeid_values >> aeid
+      - paste global aeid > global_complete
+
 
