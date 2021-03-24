@@ -1,0 +1,1000 @@
+  673  LS
+  674  ls
+  675  ls -lthr
+  676  cd invitro_cheminformatics/dtxcid/
+  677  ls
+  678  ls -lthr
+  679  rm ou*
+  680  ls
+  681  ls -lthr
+  682  cd ../database/
+  683  ls
+  684  pip install -e .
+  685  cd ..
+  686  cd dtxcid/
+  687  ls
+  688  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  689  fillfp
+  690  vi out 
+  691  pip install mysql-connector
+  692  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  693  ls
+  694  vi out 
+  695  rm out 
+  696  top
+  697  ls
+  698  ls -lthr
+  699  ls
+  700  vi mc5_2.tsv.dtxcid 
+  701  fillfp 
+  702  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  703  top
+  704  ls
+  705  vi out 
+  706  ls
+  707  cd ..
+  708  ls
+  709  pwd
+  710  cd ..
+  711  ls
+  712  cd ..
+  713  ls
+  714  ls -lthr
+  715  cd thetest/
+  716  ls
+  717  cd invitro_cheminformatics/
+  718  ls
+  719  ls -lthr
+  720  cd dtxcid/
+  721  ls
+  722  vi out 
+  723  cd ..
+  724  ls
+  725  ls -lthr
+  726  cd play/
+  727  ls
+  728  cd ..
+  729  ls
+  730  cd dtxcid/
+  731  ls
+  732  cd ..
+  733  ls
+  734  ls -lth
+  735  cd FillFingerprints/
+  736  ls
+  737  ls -lthr
+  738  cd ..
+  739  ls
+  740  cd ..
+  741  ls
+  742  cd ..
+  743  ls
+  744  ls -lthr
+  745  cd test/
+  746  ls
+  747  cd ../
+  748  cd iloveidiots/
+  749  ls
+  750  cd invitro_cheminformatics/
+  751  ls
+  752  ls -lthr
+  753  cd tsv/
+  754  ls
+  755  cd ..
+  756  cd dtxcid/
+  757  ls
+  758  ls -lthr
+  759  cd ..
+  760  ls
+  761  cd ..
+  762  ls
+  763  ls -lthr
+  764  cd finale/
+  765  ls
+  766  cd invitro_cheminformatics/
+  767  ls
+  768  cd FillFingerprints/
+  769  ls
+  770  vi fillfp.py 
+  771  cd ..
+  772  cd dtxcid/
+  773  ls
+  774  vi mc5_3.tsv.dtxcid 
+  775  vi out 
+  776  cd ../FillFingerprints/
+  777  vi fillfp.py 
+  778  pip install -e .
+  779  cd ..
+  780  cd dtxcid/
+  781  ls
+  782  vi out 
+  783  ls
+  784  rm out 
+  785  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  786  top
+  787  ls
+  788  vi out 
+  789  cd ..
+  790  cd FillFingerprints/
+  791  vi fillfp.py 
+  792  ls
+  793  pip install -e .
+  794  cd ../dtxcid/
+  795  ls
+  796  vi out 
+  797  mv out out_old
+  798  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  799  top
+  800  ls
+  801  vi out
+  802  vi out_old 
+  803  vi out
+  804  cd ../FillFingerprints/
+  805  vi fillfp.py 
+  806  mv out out_old_new
+  807  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  808  top
+  809  ls
+  810  ls -lthr
+  811  vi out
+  812  ls -lthr
+  813  cd ..
+  814  cd dtxcid/
+  815  ls
+  816  rm out*
+  817  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  818  ls
+  819  vi out 
+  820  cd ../FillFingerprints/
+  821  vi fillfp.py 
+  822  pip install -e .
+  823  cd ..
+  824  ls
+  825  cd dtxcid/
+  826  ls
+  827  rm out 
+  828  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  829  vi out 
+  830  cd ../FillFingerprints/
+  831  vi fillfp.py 
+  832  pip install -e .
+  833  cd ../dtxcid/
+  834  ls
+  835  rm out 
+  836  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  837  https://github.com/mshobair/invitro_cheminformatics.git
+  838  vi out 
+  839  cd ../FillFingerprints/
+  840  vi fillfp.py 
+  841  pip install -e .
+  842  cd ../dtxcid/
+  843  rm out 
+  844  ls
+  845  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  846  vi out 
+  847  ls
+  848  vi out 
+  849  vi mc5_2.tsv.dtxcid 
+  850  cd ../FillFingerprints/
+  851  vi fillfp.py 
+  852  pip install -e .
+  853  cd ../dtxcid/
+  854  ls
+  855  rm out 
+  856  ls
+  857  cd ..
+  858  mkdir dtxcid_temp
+  859  cd -
+  860  mv database/ ../dtxcid_temp/
+  861  mv credentials.yml ../dtxcid_temp/
+  862  ls
+  863  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  864  ls
+  865  vi out 
+  866  cp -r ../dtxcid_temp/database/ .
+  867  cp ../dtxcid_temp/credentials.yml .
+  868  ls
+  869  rm out 
+  870  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  871  ls
+  872  vi out 
+  873  pwd
+  874  ls
+  875  vi out 
+  876  cd ../database/
+  877  python setup.py install
+  878  ls
+  879  cd ../
+  880  ls
+  881  cd finale/
+  882  ls
+  883  cd ..
+  884  ls
+  885  cd dtxcid
+  886  ls
+  887  rm out 
+  888  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  889  vi out 
+  890  cd -
+  891  ls
+  892  vi o
+  893  vi out
+  894  ls
+  895  cd dtxcid
+  896  ls
+  897  vi out 
+  898  python
+  899  ls
+  900  cd ../FillFingerprints/
+  901  vi fillfp.py 
+  902  python setup.py install
+  903  cd -
+  904  rm out 
+  905  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  906  vi out 
+  907  ls
+  908  cd database/
+  909  pip install -e .
+  910  ls
+  911  cd -
+  912  ls
+  913  rm out 
+  914  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  915  vi out 
+  916  cd ../FillFingerprints/
+  917  ls
+  918  vi fillfp.py 
+  919  pip install -e .
+  920  cd ../
+  921  ls
+  922  cd dtxcid
+  923  ls
+  924  rm out 
+  925  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  926  top
+  927  ls
+  928  ls -lthr
+  929  top
+  930  ls
+  931  top
+  932  ls
+  933  ls -lthr
+  934  vi out 
+  935  cd ../FillFingerprints/
+  936  ls
+  937  vi fillfp.py 
+  938  pip install -e .
+  939  cd -
+  940  ls
+  941  vi out 
+  942  rm out 
+  943  ls
+  944  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  945  ls
+  946  ls 0lthr
+  947  ls -lthr
+  948  vi out 
+  949  ls -lthr
+  950  top
+  951  ls
+  952  vi out 
+  953  ls
+  954  vi out 
+  955  ls -lthr
+  956  vi out 
+  957  ls
+  958  top
+  959  ls
+  960  top
+  961  ls
+  962  ls -lthr
+  963  top
+  964  ls -lthr
+  965  vi out 
+  966  top
+  967  ls -lthr
+  968  vi mc5_2.tsv.dtxcid.fp 
+  969  ls
+  970  ls -lthr
+  971  top
+  972  ls
+  973  ls -lthr
+  974  vi mc5_3.tsv.dtxcid
+  975  vi mc5_3.tsv.dtxcid.fp 
+  976  python
+  977  cd finale/
+  978  ls
+  979  cd invitro_cheminformatics/
+  980  source finale/bin/activate
+  981  cd FillFingerprints/
+  982  pip install -e .
+  983  cd ../dtxcid
+  984  ls
+  985  ls -lthr
+  986  mv *fp ../dtxcid_temp/
+  987  ls
+  988  rm out 
+  989  ls
+  990  cd database/
+  991  ls
+  992  cd ..
+  993  ls
+  994  nohup sh -c 'for file in *; do fillfp $file -o "$file.fp" ; done' >> out &
+  995  ls
+  996  ls -lthr
+  997  top
+  998  ls -lthr
+  999  vi out 
+ 1000  ls -lthr
+ 1001  cd finale/
+ 1002  ls
+ 1003  cd invitro_cheminformatics/
+ 1004  ls
+ 1005  ls -lthr
+ 1006  cd dtxcid
+ 1007  ls
+ 1008  ls -lthr
+ 1009  vi mc5_2.tsv.dtxcid.fp 
+ 1010  cd ..
+ 1011  mkdir fp
+ 1012  cp dtxcid/*fp fp/
+ 1013  cd fp/
+ 1014  ls
+ 1015  cd ../Enrichment_Table_Generator/
+ 1016  python setup.py install
+ 1017  cd ..
+ 1018  pwd
+ 1019  source finale/bin/activate
+ 1020  cd Enrichment_Table_Generator/
+ 1021  python setup.py install
+ 1022  cd ../fp/
+ 1023  ls
+ 1024  nohup sh -c 'for file in *; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1025  top
+ 1026  ls
+ 1027  vi out 
+ 1028  ls
+ 1029  cd ../Enrichment_Table_Generator/
+ 1030  pip install -e .
+ 1031  cd ../fp/
+ 1032  ls
+ 1033  rm out 
+ 1034  nohup sh -c 'for file in *; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1035  ls
+ 1036  vi out 
+ 1037  ls -lthr
+ 1038  vi out 
+ 1039  cd ../Enrichment_Table_Generator/
+ 1040  vi Enrichment_Table_Generator.py 
+ 1041  pip install -e .
+ 1042  cd ../fp/
+ 1043  ls -lthr
+ 1044  rm out 
+ 1045  nohup sh -c 'for file in *; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1046  vi out 
+ 1047  cd ../Enrichment_Table_Generator/
+ 1048  vi Enrichment_Table_Generator.py 
+ 1049  pip install -e .
+ 1050  cd ../fp/
+ 1051  ls
+ 1052  rm out 
+ 1053  nohup sh -c 'for file in *; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1054  ls
+ 1055  vi out 
+ 1056  cd ../Enrichment_Table_Generator/
+ 1057  vi Enrichment_Table_Generator.py 
+ 1058  pip install -e .
+ 1059  cd ../fp/
+ 1060  ls
+ 1061  rm out 
+ 1062  nohup sh -c 'for file in *; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1063  ls
+ 1064  vi out 
+ 1065  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py 
+ 1066  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_2.tsv.dtxcid.fp 
+ 1067  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py  mc5_2.tsv.dtxcid.fp 
+ 1068  cd ../Enrichment_Table_Generator/
+ 1069  vi Enrichment_Table_Generator.py 
+ 1070  cd ../fp/
+ 1071  vi mc5_2.tsv.dtxcid.fp 
+ 1072  vi mc5_3.tsv.dtxcid.fp 
+ 1073  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1074  cd ../Enrichment_Table_Generator/
+ 1075  vi Enrichment_Table_Generator.py 
+ 1076  cd ../fp/
+ 1077  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1078  ls
+ 1079  cd -
+ 1080  cp ~/Enrichment_Table_Generator.py .
+ 1081  cd ../
+ 1082  cd fp/
+ 1083  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1084  cd ../Enrichment_Table_Generator/
+ 1085  vi Enrichment_Table_Generator.py 
+ 1086  cd ../fp/
+ 1087  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1088  cd -
+ 1089  vi Enrichment_Table_Generator.py 
+ 1090  cd ../fp/
+ 1091  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1092  cd -
+ 1093  lls
+ 1094  vi Enrichment_Table_Generator.py 
+ 1095  cd ../fp/
+ 1096  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1097  cd -
+ 1098  cp ~/Enrichment_Table_Generator.py .
+ 1099  cp ~/duplicatehandler.py .
+ 1100  ls
+ 1101  cd ../
+ 1102  cd fp/
+ 1103  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1104  cd ../Enrichment_Table_Generator/
+ 1105  vi Enrichment_Table_Generator.py 
+ 1106  cd -
+ 1107  ls
+ 1108  vi mc5_2.tsv.dtxcid.fp 
+ 1109  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich -duplicates 0
+ 1110  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich -duplicates 1
+ 1111  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich -duplicates 2
+ 1112  cd ../Enrichment_Table_Generator/
+ 1113  vi duplicatehandler.py 
+ 1114  vi Enrichment_Table_Generator.py 
+ 1115  pip install -e .
+ 1116  cd ../fp/
+ 1117  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich 1
+ 1118  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich 
+ 1119  cd ../
+ 1120  cd Enrichment_Table_Generator/
+ 1121  vi Enrichment_Table_Generator.py 
+ 1122  cd ../fp/
+ 1123  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich 
+ 1124  cd ../Enrichment_Table_Generator/
+ 1125  vi Enrichment_Table_Generator.py 
+ 1126  cd ../fp/
+ 1127  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich 
+ 1128  cd ../Enrichment_Table_Generator/
+ 1129  vi Enrichment_Table_Generator.py 
+ 1130  cd ../fp/
+ 1131  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich 
+ 1132  cd ../Enrichment_Table_Generator/
+ 1133  vi Enrichment_Table_Generator.py 
+ 1134  cd ../
+ 1135  cd fo
+ 1136  cd fp
+ 1137  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich 
+ 1138  cd ../Enrichment_Table_Generator/
+ 1139  cp ~/Enrichment_Table_Generator.py .
+ 1140  ls
+ 1141  vi test
+ 1142  vi test3
+ 1143  vi book1_fp.tsv 
+ 1144  python Enrichment_Table_Generator.py -i book1_fp.tsv -o output
+ 1145  cd ../fp/
+ 1146  ls
+ 1147  rm out 
+ 1148  python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i book1_fp.tsv -o output
+ 1149  Enrichment_Table_Generator 
+ 1150  mv ../Enrichment_Table_Generator/ .
+ 1151  python Enrichment_Table_Generator/Enrichment_Table_Generator.py -i book1_fp.tsv -o output
+ 1152  python Enrichment_Table_Generator/Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o output
+ 1153  ls
+ 1154  cd Enrichment_Table_Generator/
+ 1155  pip install -e .
+ 1156  ls
+ 1157  cd ..
+ 1158  lks
+ 1159  ls
+ 1160  cd ../
+ 1161  ls
+ 1162  mv fp/Enrichment_Table_Generator/ .
+ 1163  mv fp/mc5_* Enrichment_Table_Generator/
+ 1164  cd Enrichment_Table_Generator/
+ 1165  ls
+ 1166  rm enrichment_table_generator_2.py 
+ 1167  rm test*
+ 1168  ls
+ 1169  rm book1_fp.tsv 
+ 1170  nohup sh -c 'for file in *.fp; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1171  l;s
+ 1172  ls
+ 1173  ls -lthr
+ 1174  vi out 
+ 1175  python Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1176  pip install -e .
+ 1177  python Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1178  pwd
+ 1179  ls
+ 1180  cp ~/Enrichment_Table_Generator.py .
+ 1181  python Enrichment_Table_Generator.py -i mc5_3.tsv.dtxcid.fp -o mc5_3.tsv.dtxcid.fp.enrich
+ 1182  ls
+ 1183  vi mc5_3.tsv.dtxcid.fp 
+ 1184  cp ~/book1_fp.tsv .
+ 1185  vi book1_fp.tsv 
+ 1186  python Enrichment_Table_Generator.py -i book1_fp.tsv  -o book3_fp.tsv
+ 1187  vi book3_fp.tsv 
+ 1188  cp ~/book1_fp.tsv .
+ 1189  python Enrichment_Table_Generator.py -i book1_fp.tsv  -o book3_fp.tsv
+ 1190  ls -lthr
+ 1191  vi book3_fp.tsv 
+ 1192  vi book1_fp.tsv 
+ 1193  cd ../
+ 1194  ls
+ 1195  cd fp/
+ 1196  ls
+ 1197  cp ../Enrichment_Table_Generator/mc5_* .
+ 1198  ls
+ 1199  mv mc5_2.tsv.dtxcid.fp mc5_2.tsv.dtxcid.fp.tsv
+ 1200  mv mc5_3.tsv.dtxcid.fp mc5_3.tsv.dtxcid.fp.tsv
+ 1201  nohup sh -c 'for file in *.fp.tsv; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1202  ls
+ 1203  vi out 
+ 1204  top
+ 1205  ls
+ 1206  ls -lthr
+ 1207  vi mc5_2.tsv.dtxcid.fp.tsv.enrich 
+ 1208  cd ../
+ 1209  mkdir enrich
+ 1210  cp fp/*enrich enrich
+ 1211  cd enrich/
+ 1212  ls
+ 1213  vi mc5_2.tsv.dtxcid.fp.tsv.enrich 
+ 1214  nohup sh -c 'for file in * ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' file > file ; done' >> out
+ 1215  for file in * ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' file > file ; done
+ 1216  ls
+ 1217  ls -lthr
+ 1218  for file in * ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' $file > $file.clean ; done
+ 1219  ls
+ 1220  ls -lthr
+ 1221  vi mc5_2.tsv.dtxcid.fp.tsv.enrich.clean 
+ 1222  ls
+ 1223  rm file
+ 1224  rm file.clean 
+ 1225  l
+ 1226  ls
+ 1227  rm nohup.out
+ 1228  rm out
+ 1229  rm out.clean 
+ 1230  s
+ 1231  ls
+ 1232  rm nohup.out.clean 
+ 1233  ls
+ 1234  for file in * ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' $file > $file.clean ; done
+ 1235  ls
+ 1236  ls 
+ 1237  ls -lthr
+ 1238  rm mc5_2.tsv.dtxcid.fp.tsv.enrich.clean.clean 
+ 1239  rm mc5_3.tsv.dtxcid.fp.tsv.enrich.clean.clean 
+ 1240  ls
+ 1241  cd ..
+ 1242  cd -
+ 1243  ls
+ 1244  cd ..
+ 1245  ls
+ 1246  cd -
+ 1247  ls
+ 1248  ls\
+ 1249  ls
+ 1250  vi mc5_2.tsv.dtxcid.fp.tsv.enrich.clean 
+ 1251  mkdir clean
+ 1252  cp *clean clean/
+ 1253  ls
+ 1254  cd clean/
+ 1255  ls
+ 1256  rm *clean
+ 1257  ls
+ 1258  cd ..
+ 1259  ls
+ 1260  rm clean
+ 1261  rm -r  clean
+ 1262  rm *clean
+ 1263  ls
+ 1264  for file in * ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' $file > $file.aeid ; done
+ 1265  ls
+ 1266  cat *aeid > global
+ 1267  rm global 
+ 1268  cat *aeid >> global
+ 1269  vi global 
+ 1270  ls
+ 1271  sed -i '/CONSENSUS/d' ./baseline_global > baseline_global_Clean1
+ 1272  sed -i '/CONSENSUS/d' global 
+ 1273  vi global 
+ 1274  awk -1 global 
+ 1275  awk -F 1 global 
+ 1276  head -n 1 global 
+ 1277  head -n 1 global > header
+ 1278  ls
+ 1279  ls -lthr
+ 1280  vi global 
+ 1281  rm global 
+ 1282  cat *aeid >> global_temp
+ 1283  sed -i '/CONSENSUS/d' global_temp 
+ 1284  sed -i '/Finger/d' global_temp 
+ 1285  vi global_temp 
+ 1286  sed -i '/CONSENSUS/d' global_temp
+ 1287  cp header global
+ 1288  cat global_temp >> global
+ 1289  vi global
+ 1290  sed -e 's/Here\(.*\)String/\1/' "HereisString"
+ 1291  sed -e 's/Here\(.*\)String/\1/' HereisString
+ 1292  sed -e 's/Here\(.*\)String/\1/' 
+ 1293  sed -e 's/Here\(.*\)String/\1/' global
+ 1294  sed -e 's/Here\(.*\)String/\1/' global$1
+ 1295  sed -e 's/Here\(.*\)String/\1/' global$2
+ 1296  global -F 1
+ 1297  head global
+ 1298  sed -n '/mc5/,/.tsv/p' global
+ 1299  sed -n '/mc5/,/tsv/p' global
+ 1300  grep -oP '(?<=dn: uid=).+?(?=,ou=)' file
+ 1301  grep -oP '(?<=mc5_).+?(?=,.)' file
+ 1302  grep -oP '(?<=mc5_).+?(?=,.)' global
+ 1303  grep -oP '(?<=mc5_).+?(?=,tsv)' global
+ 1304  grep -oP '(?<=mc5_).+?(?=tsv)' global
+ 1305  grep -oP '(?<=mc5_).+?(?=.tsv)' global
+ 1306  grep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid
+ 1307  cat 'aeid'
+ 1308  echo aeid
+ 1309  echo aeid >> aeid_column_name
+ 1310  echo aeid_column_name 
+ 1311  grep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid_values
+ 1312  echo aeid >> aeid
+ 1313  echo aeid
+ 1314  cat aeid_values >> aeid
+ 1315  vi aeid
+ 1316  rm aeid
+ 1317  echo aeid >> aeid
+ 1318  vi aeid
+ 1319  cat aeid_values >> aeid
+ 1320  vi aeid
+ 1321  paste global aeid
+ 1322  paste global aeid > global_filled
+ 1323  vi global
+ 1324  vi global_filled 
+ 1325  grep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid_valuesgrep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid_values
+ 1326  cd ..
+ 1327  ls
+ 1328  cd Enrichment_Table_Generator/
+ 1329  cd ..
+ 1330  ls
+ 1331  cd fp/
+ 1332  ls
+ 1333  cd ../
+ 1334  git add fp
+ 1335  ls
+ 1336  cd FillFingerprints/
+ 1337  ls
+ 1338  cd ../
+ 1339  ls
+ 1340  pwd
+ 1341  cd dtxcid
+ 1342  ls
+ 1343  cd ../
+ 1344  git add database
+ 1345  cd enrich/
+ 1346  ls
+ 1347  cd ../
+ 1348  cd -
+ 1349  rm baseline_global_Clean1 
+ 1350  ls
+ 1351  rm aeid_valuesgrep 
+ 1352  rm aeid_column_name 
+ 1353  ls
+ 1354  cd ..
+ 1355  git add enrich/
+ 1356  git commit -m "adding example output"
+ 1357  git push
+ 1358  ls
+ 1359  cd ../
+ 1360  ls
+ 1361  cd ../
+ 1362  mkdir test_finale
+ 1363  deactivate
+ 1364  mkdir test_finale
+ 1365  cd test
+ 1366  l
+ 1367  cd ..
+ 1368  cd test_finale/
+ 1369  ls
+ 1370  git clone https://github.com/mshobair/invitro_cheminformatics.git
+ 1371  cd ..
+ 1372  cd test_finale/
+ 1373  ls
+ 1374  cd ../
+ 1375  ls
+ 1376  mkdir new_directory
+ 1377  cd new_directory/
+ 1378  git clone https://github.com/mshobair/invitro_cheminformatics.git
+ 1379  cd invitro_cheminformatics/
+ 1380  R
+ 1381  ls -lthr
+ 1382  rm -r test_env/
+ 1383  rm *.clean
+ 1384  mkdir test_env
+ 1385  python3 -m virtualenv test_env
+ 1386  source test_env/bin/activate
+ 1387  pip install pandas
+ 1388  pip install mysql-connector
+ 1389  cd database
+ 1390  pip install -e .
+ 1391  cd ../
+ 1392  mkdir clean
+ 1393  for file in mc*; do sed '/-/d'  $file | sed '/NA/d' >  clean/"$file.clean" ; done
+ 1394  cd clean/
+ 1395  ls -lthr
+ 1396  cd ../
+ 1397  cp clean/*.clean csvtocsv
+ 1398  ls
+ 1399  cd csvtotsv/
+ 1400  ls
+ 1401  cd ../
+ 1402  ls
+ 1403  cd clean/
+ 1404  ls
+ 1405  cd ../
+ 1406  ls
+ 1407  cd ..
+ 1408  ls
+ 1409  cd ..
+ 1410  ls
+ 1411  ls -lthr
+ 1412  cd finale/
+ 1413  ls
+ 1414  cd  invitro_cheminformatics/
+ 1415  ls
+ 1416  cd csvtotsv/
+ 1417  ls
+ 1418  cd ..
+ 1419  ls
+ 1420  cd finale/
+ 1421  ls
+ 1422  cd ..
+ 1423  ls
+ 1424  cd tsv/
+ 1425  ls
+ 1426  vi out 
+ 1427  ls
+ 1428  cd ../
+ 1429  ls
+ 1430  cd database/
+ 1431  ls
+ 1432  cd ../
+ 1433  ls
+ 1434  cd ../
+ 1435  'ls
+ 1436  cd ../
+ 1437  ls
+ 1438  ls -lthr
+ 1439  cd test
+ 1440  ls
+ 1441  cd ../
+ 1442  cd invitro_cheminformatics/
+ 1443  ls
+ 1444  ls -lthr
+ 1445  cp csv2tsv.py ~
+ 1446  cd ../
+ 1447  cp csv2tsv.py new_directory/invitro_cheminformatics/
+ 1448  cd new_directory/invitro_cheminformatics/
+ 1449  ls
+ 1450  vi csv2tsv.py 
+ 1451  cd clean/
+ 1452  ls -lthr
+ 1453  vi mc5_3.csv.clean 
+ 1454  cd ../
+ 1455  python csv2tsv.py 
+ 1456  cd csvtotsv/
+ 1457  ls -lthr
+ 1458  cd ../
+ 1459  ls -lthr
+ 1460  vi csv2tsv.py 
+ 1461  cd tsv/
+ 1462  ls
+ 1463  ls -lthr
+ 1464  cd ..
+ 1465  cp csvtotsv/*tsv tsv
+ 1466  cd  Chemical_ID_Convert
+ 1467  pip install -e .
+ 1468  cd ..
+ 1469  cd tsv/
+ 1470  ls
+ 1471  ls -lthr
+ 1472  vi out 
+ 1473  nohup sh -c 'for file in *; do chemidconvert DTXSID DTXCID $file -e > "$file.dtxcid" ; done' >> out &  
+ 1474  ls
+ 1475  ls -lthr
+ 1476  vi out 
+ 1477  ls -lthr
+ 1478  vi mc5_2.tsv.dtxcid 
+ 1479  ls -lthr
+ 1480  cd ..
+ 1481  nohup sh -c 'for file in *; do chemidconvert DTXSID DTXCID $file -e > "$file.dtxcid" ; done' >> out &  
+ 1482  cp tsv/*dtxcid dtxcid/
+ 1483  cd dtxcid/
+ 1484  ls -lthr
+ 1485  cd ..
+ 1486  ls
+ 1487  cd FillFingerprints/
+ 1488  pip install -e .
+ 1489  cd ../
+ 1490  cd dtxcid/
+ 1491  ls
+ 1492  ls -lthr
+ 1493  nohup sh -c 'for file in *dtxcid; do fillfp $file -o "$file.fp.tsv" ; done' >> out &
+ 1494  top
+ 1495  ls -lthr
+ 1496  top
+ 1497  ls -lthr
+ 1498  vi out
+ 1499  ls
+ 1500  ls -lthr
+ 1501  ls
+ 1502  cd ../
+ 1503  ls
+ 1504  cd fp/
+ 1505  ls
+ 1506  cd ../
+ 1507  ls
+ 1508  cd dtxcid/
+ 1509  ls
+ 1510  vi out
+ 1511  cd ../FillFingerprints/
+ 1512  vi fillfp.py 
+ 1513  pwd
+ 1514  cd ../
+ 1515  cd ../finale/invitro_cheminformatics/FillFingerprints/
+ 1516  vi fillfp.py 
+ 1517  cp fillfp.py ../../../new_directory/invitro_cheminformatics/FillFingerprints
+ 1518  cd ../../../new_directory/invitro_cheminformatics/
+ 1519  ls
+ 1520  cd dtxcid/
+ 1521  ls
+ 1522  ls -lthr
+ 1523  rm out
+ 1524  rm out.dtxcid
+ 1525  ls
+ 1526  rm out.dtxcid.tsv 
+ 1527  ls
+ 1528  cd ../
+ 1529  cd FillFingerprints/
+ 1530  ls -lthr
+ 1531  pip install -e .
+ 1532  cd ../
+ 1533  ls
+ 1534  cd dtxcid/
+ 1535  ls
+ 1536  cd ../tsv/
+ 1537  ls
+ 1538  ls -lthr
+ 1539  cd ../dtxcid/
+ 1540  ls -lthr
+ 1541  rm out.dtxcid.fillfp 
+ 1542  nohup sh -c 'for file in *dtxcid; do fillfp $file -o "$file.fp.tsv" ; done' >> out &
+ 1543  top
+ 1544  ls
+ 1545  vi out 
+ 1546  ls
+ 1547  ls -lthr
+ 1548  ls
+ 1549  ls -lthr
+ 1550  vi mc5_2.tsv.dtxcid.fp.tsv 
+ 1551  cd ../FillFingerprints/
+ 1552  ls
+ 1553  ls -lthr
+ 1554  git add fillfp.py
+ 1555  git commit -m "update fillfp.py"
+ 1556  git push
+ 1557  ls
+ 1558  cd ../dtxcid/
+ 1559  ls -lthr
+ 1560  cd ../
+ 1561  cd fp/
+ 1562  ls
+ 1563  cd ../
+ 1564  cp dtxcid/*fp fp
+ 1565  ls
+ 1566  rm *.dtxcid
+ 1567  ls
+ 1568  cp dtxcid/*fp.tsv fp
+ 1569  cd Enrichment_Table_Generator/
+ 1570  ls
+ 1571  python setup.py install
+ 1572  cd ../
+ 1573  cd fp/
+ 1574  ls
+ 1575  ls -lthr
+ 1576  rm out 
+ 1577  nohup sh -c 'for file in *.fp.tsv; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1578  ls -lthr
+ 1579  vi out 
+ 1580  ls
+ 1581  ls -lthr
+ 1582  cd ..
+ 1583  cd -
+ 1584  cd ../
+ 1585  cd Enrichment_Table_Generator/
+ 1586  pip install -e .
+ 1587  cd ../fp/
+ 1588  ls
+ 1589  rm out 
+ 1590  nohup sh -c 'for file in *.fp.tsv; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1591  vi out 
+ 1592  rm out 
+ 1593  cd ../Enrichment_Table_Generator/
+ 1594  diff Enrichment_Table_Generator.py ~/Enrichment_Table_Generator.py 
+ 1595  cp ~/Enrichment_Table_Generator.py Enrichment_Table_Generator.py 
+ 1596  python setup.py install
+ 1597  cd ../fp/
+ 1598  nohup sh -c 'for file in *.fp.tsv; do python ../Enrichment_Table_Generator/Enrichment_Table_Generator.py -i $file -o $file.enrich ; done' >> out &
+ 1599  ls
+ 1600  vi out 
+ 1601  wc -l out 
+ 1602  cd ../Enrichment_Table_Generator/
+ 1603  git add Enrichment_Table_Generator.py
+ 1604  git commit -m "update Enrichment_Table_Generator.py"
+ 1605  git push
+ 1606  cd ../fp/
+ 1607  ls -lthr
+ 1608  wc -l out 
+ 1609  ls
+ 1610  wc -l
+ 1611  wc -l out 
+ 1612  wc -l mc5_2.tsv.dtxcid.fp.tsv
+ 1613  wc -l mc5_3.tsv.dtxcid.fp.tsv
+ 1614  wc -l p
+ 1615  wc -l out 
+ 1616  vi out 
+ 1617  ls -lthr
+ 1618  ls
+ 1619  ls -lthr
+ 1620  cd ../
+ 1621  cd enrich/
+ 1622  ls
+ 1623  cd ..
+ 1624  cp fp/*enrich enrich/
+ 1625  ls
+ 1626  cd enrich/
+ 1627  ls
+ 1628  for file in *.enrich ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' $file > $file.aeid ; done 
+ 1629  ls -lthr
+ 1630  vi mc5_2.tsv.dtxcid.fp.tsv.enrich
+ 1631  vi mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid 
+ 1632   head -n 1 mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid
+ 1633           > header
+ 1634  head -n 1 mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid > header
+ 1635  vi header 
+ 1636  cp header global
+ 1637  cat *aeid >> global_temp
+ 1638  ls -lthr
+ 1639  vi header 
+ 1640  vi global_temp 
+ 1641  vi mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid 
+ 1642  rm global_temp 
+ 1643  cat *aeid >> global_temp
+ 1644  vi global_temp 
+ 1645  vi mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid 
+ 1646  rm global_temp 
+ 1647  cat *.aeid >> global_temp
+ 1648  vi global_temp 
+ 1649        - sed -i '/CONSENSUS/d' global_temp
+ 1650  sed -i '/CONSENSUS/d' global_temp
+ 1651  vi global_temp 
+ 1652  sed -i '/Finger/d' global_temp
+ 1653  vi global_temp 
+ 1654  (test_env) [mshobair@v2626umcth038 enrich]$ rm
+ 1655        - cat global_temp >> global 
+ 1656  cat global_temp >> global 
+ 1657  vi global
+ 1658   echo aeid > aeid
+ 1659  vi aeid
+ 1660  grep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid_values
+ 1661  vi aeid_values 
+ 1662  cat aeid_values >> cat
+ 1663  rm cat 
+ 1664  cat aeid_values >>aeid
+ 1665  vi aeid
+ 1666  paste global aeid > global_complete
+ 1667  vi global_complete 
+ 1668  git status
+ 1669  ls
+ 1670  git add *
+ 1671  history
+ 1672  history > history_20210324
