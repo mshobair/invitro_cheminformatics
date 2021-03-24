@@ -37,39 +37,43 @@ def cli(cidtable,o,dsi,t):
     for -dsi: toxprints=1445, pubchem=1447, MACCs=1446
     a newer descriptor_set_id may be added or current dsis changed
     """
+    # code below reassigns idrow, temp fix is to define as global
 
     # takes stdin if argument is not directly given
-
-    if not cidtable:
-        cidtable = sys.stdin.read()
-        mytable = pd.read_csv(StringIO(cidtable), sep="\t")
-    elif cidtable:
-        mytable = pd.read_csv(cidtable, sep="\t")
-
+    
+   # if not cidtable:
+   #     cidtable = sys.stdin.read()
+   #     mytable = pd.read_csv(StringIO(cidtable), sep="\t")
+   # elif cidtable:
+   #     mytable = pd.read_csv(cidtable, sep="\t")
+    
+    mytable = pd.read_csv(cidtable, sep="\t")
+    idrow = mytable.iloc[:,0]
+    colname = mytable.columns.values[0]
 
     #checks the index, and first two columns for DTXCIDs
     #input table should be in the correct format already
-    try:
-        if mytable.iloc[0,0][0:6] == 'DTXCID':
-            idrow = mytable.iloc[:,0]
-            colname = mytable.columns.values[0]
+   # try:
+   #     if mytable.iloc[0,0][0:6] == 'dtxcid':
+   #         idrow = mytable.iloc[:,0]
+   #         colname = mytable.columns.values[0]
 
-    except:
-        pass
-    try:
-        if mytable.iloc[0,1][0:6] == 'DTXCID':
-            idrow = mytable.iloc[:,1]
-            colname = mytable.columns.values[0]
+   # except:
+   #     pass
+   # try:
+   #     if mytable.iloc[0,1][0:6] == 'dtxcid':
+   #         idrow = mytable.iloc[:,1]
+   #         colname = mytable.columns.values[0]
 
-    except:
-        pass
-    try:
-        if mytable.index.values[0][0:6] == 'DTXCID':
-            idrow = mytable.index.values
-            mytable.index.name = 'DTXCID'
-            colname = mytable.index.name
-    except:
-        pass
+   # except:
+   #     pass
+   # try:
+   #     if mytable.index.values[0][0:6] == 'dtxcid':
+   #         idrow = mytable.index.values
+   #         mytable.index.name = 'dtxcid'
+   #         colname = mytable.index.name
+   # except:
+#        pass
 
 
     # exit if not idrow
@@ -96,9 +100,10 @@ def cli(cidtable,o,dsi,t):
         .filter(CompoundDescriptorSets.fk_descriptor_set_id == dsi)
 
     df2 = pd.DataFrame(list(query2))
-    idrow = pd.DataFrame(idrow)
-    idrow.columns = ['dsstox_compound_id']
-    df2 = pd.merge(idrow, df2, on='dsstox_compound_id', how='inner')
+    df2.columns = ['dsstox_compound_id', 'descriptor_string_tsv']
+    idrow_df = pd.DataFrame(idrow)
+    idrow_df.columns = ['dsstox_compound_id']
+    df2 = pd.merge(idrow_df, df2, on='dsstox_compound_id', how='inner')
 
 
     # something to separate and name fingerprint columns
@@ -144,6 +149,7 @@ def cli(cidtable,o,dsi,t):
     if o =='':
         click.echo(output)
     else:
+        outputtable = outputtable.drop('Unnamed: 2', axis=1)
         outputtable.to_csv(o, sep='\t', index=False)
 
     sys.exit(0)
