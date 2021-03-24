@@ -164,22 +164,33 @@ cd enrich
 8) Create global baseline enrichment table
     
    - add column "file" referencing file with mc5 table from invitrodb to get aeid
-      - for file in *.enrich ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' $file > $file.aeid ; done  
-   - copy header and create a file for global table and dump all enrichment tables to it
-      - head -n 1 mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid > header
-      - cp header global
-      - rm global_temp
-      - cat *.aeid >> global_temp
+```sh
+for file in *.enrich ; do awk 'NR == 1 {print $0 "\t" "file_name"; next;}{print $0 "\t" FILENAME;}' $file > $file.aeid ; done  
+```
+   - copy header and create a file for global table and dump all enrichment tables into it
+```sh
+head -n 1 mc5_2.tsv.dtxcid.fp.tsv.enrich.aeid > header
+cp header global
+rm global_temp
+cat *.aeid >> global_temp
+```
    - remove sconsensus lines
-      - sed -i '/CONSENSUS/d' global_temp
+```sh
+sed -i '/CONSENSUS/d' global_temp
+```
    - remove duplicate header
-      - sed -i '/Finger/d' global_temp
+```sh
+sed -i '/Finger/d' global_temp
+```
    - generate clean global table
-      - cat global_temp >> global 
+```sh
+cat global_temp >> global 
+```
    - add column "aeid" to global from "file_name" column
-      - echo aeid > aeid
-      - grep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid_values
-      - cat aeid_values >> aeid
-      - paste global aeid > global_complete
-
+```sh
+echo aeid > aeid
+grep -oP '(?<=mc5_).+?(?=.tsv)' global > aeid_values
+cat aeid_values >> aeid
+paste global aeid > global_complete
+```
 
