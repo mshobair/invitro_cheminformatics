@@ -1,6 +1,7 @@
 # invitro_cheminformatics
-Workflow to perform cheminformatics analysis of a database instance on linux server containing in vitro toxicological data. This workflow queries the databases (invitrodb [prod_internal_invitrodb_v3_3], dsstox[], qsar[ro_rlougee_qsar] )
+Workflow to perform cheminformatics analysis of a database instance on linux server containing in vitro toxicological data. This workflow queries the databases (invitrodb [prod_internal_invitrodb_v3_3], dsstox[ro_20191118_dsstox], qsar[ro_rlougee_qsar] )
 
+This branch adds an option to upload enrichment modeling datasets and their results to the database.
 
 Workflow steps :
   0) Clone this repo in a new directory
@@ -121,6 +122,36 @@ copy converted files into a new directory (dtxcid)
 
 cp tsv/*dtxcid dtxcid
 ```
+skip optional if you are just running and saving enrichment results locally or go to the main branch
+optional starts: save the input file to the database, run/save enrichment to the database and pull the results
+
+- save the input file to the database
+```sh
+cd datatable2mysql
+pip install -e .
+datable2mysql  mc5_3.tsv.dtxcid "user_mc5_3" "user" 
+cd ../
+```
+- run/save enrichment to the database
+```sh
+cd Enrichment_MySQL
+pip install -e .
+nohup sh -c 'enrich_mysql' > out &  
+cd ../
+```
+This will take a while...
+- pull the results
+```sh
+cd PullEnrichment
+pip install image
+pip install -e .
+# change date to date of running datatable2mysql (above) like user_mc5_3_20210326
+
+nohup sh -c 'pullenrichment "user_mc5_3_date" -a' > out &
+cd ../
+```
+
+optional ends
 
 5) skip if no errors
 6) Query descriptor table to get the ToxPrint fingerprints. Install FillFingerprints module.
