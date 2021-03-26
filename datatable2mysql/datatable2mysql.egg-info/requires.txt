@@ -1,0 +1,7 @@
+Click
+xlrd
+pandas
+PyMySQL
+PyYAML
+mysqlclient
+SQLAlchemy

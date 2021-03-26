@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    enrich_mysql = enrich_mysql0.enrich_mysql:main
+    

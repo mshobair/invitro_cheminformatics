@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    datatable2mysql=datatable2mysql:cli
+  

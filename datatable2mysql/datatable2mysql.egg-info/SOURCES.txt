@@ -1,0 +1,8 @@
+datatable2mysql.py
+setup.py
+datatable2mysql.egg-info/PKG-INFO
+datatable2mysql.egg-info/SOURCES.txt
+datatable2mysql.egg-info/dependency_links.txt
+datatable2mysql.egg-info/entry_points.txt
+datatable2mysql.egg-info/requires.txt
+datatable2mysql.egg-info/top_level.txt

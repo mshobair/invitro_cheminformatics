@@ -1,0 +1,5 @@
+docopt
+pandas
+colorama
+numpy
+scipy

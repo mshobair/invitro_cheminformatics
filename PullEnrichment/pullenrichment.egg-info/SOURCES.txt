@@ -1,0 +1,8 @@
+setup.py
+pullenrichment.egg-info/PKG-INFO
+pullenrichment.egg-info/SOURCES.txt
+pullenrichment.egg-info/dependency_links.txt
+pullenrichment.egg-info/entry_points.txt
+pullenrichment.egg-info/not-zip-safe
+pullenrichment.egg-info/requires.txt
+pullenrichment.egg-info/top_level.txt
