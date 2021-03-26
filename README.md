@@ -1,6 +1,7 @@
 # invitro_cheminformatics
-Workflow to perform cheminformatics analysis of a database instance on linux server containing in vitro toxicological data. This workflow queries the databases (invitrodb [prod_internal_invitrodb_v3_3], dsstox[], qsar[ro_rlougee_qsar] )
+Workflow to perform cheminformatics analysis of a database instance on linux server containing in vitro toxicological data. This workflow queries the databases (invitrodb [prod_internal_invitrodb_v3_3], dsstox[ro_20191118_dsstox], qsar[ro_rlougee_qsar] )
 
+If you would like to copy the modeling datasets and their results to the database(ro_rlougee_qsar), please go to the "database_option" branch
 
 Workflow steps :
   0) Clone this repo in a new directory
